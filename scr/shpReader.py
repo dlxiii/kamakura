@@ -106,7 +106,7 @@ def houseListInArea(rec_h0, id_area, flag):
     for i in rec_h0:
         if i[flag+1] == id_area:
             houseList.append(i[0])
-    return [houseList]
+    return houseList
 
 def houseNumInArea(rec_h0, id_area, flag):
     houseNum = 0

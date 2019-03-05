@@ -25,19 +25,21 @@ for i in [1]:
     file.write('%-8s %-8s %-8s %-10s %-12s %-12s %-12s %-12s %-12s %-12s'          \
                % ('Inlet','Outlet','Slope','Rainwater','Capacity','Fill pstg',     \
                   'House num','Roof area','Roof water','RWH ctrbt') + '\n')
+    file.write('%-8s %-8s %-8s %-10s %-12s %-12s %-12s %-12s %-12s %-12s'          \
+               % ('(-)','(-)','(%)','(m^3/sec)','(m^3/sec)','(-)',     \
+                  '(-)','(m^2)','(m^3/sec)','(-)') + '\n')
     if i == 1: 
         df.drop(df.index[-1],inplace=True)
     for j in range(len(df)):
-        file.write("{:<9d}".format(df['Inlet'].tolist()[j]) +            \
-                   "{:<9.0f}".format(df['Outlet'].tolist()[j]) +           \
-                   "{:<9.2f}".format(df['Slope'].tolist()[j]) +            \
-                   "{:<11.2f}".format(df['Rainwater'].tolist()[j]) +       \
-                   "{:<13.2f}".format(df['Capacity'].tolist()[j]) +        \
-                   "{:<13.0%}".format(df['Fill perstg'].tolist()[j]) +     \
-                   "{:<13d}".format(df['House number'].tolist()[j]) +    \
-                   "{:<13.2f}".format(df['House roof area'].tolist()[j]) + \
-                   "{:<13.4f}".format(df['House water'].tolist()[j]) +     \
-                   "{:<.0%}".format(df['RWH contrbt'].tolist()[j]) +     \
+        file.write("{:4d}".format(df['Inlet'].tolist()[j]) +            \
+                   "{:10.0f}".format(df['Outlet'].tolist()[j]) +           \
+                   "{:9.2f}".format(df['Slope'].tolist()[j]) +            \
+                   "{:11.2f}".format(df['Rainwater'].tolist()[j]) +       \
+                   "{:11.2f}".format(df['Capacity'].tolist()[j]) +        \
+                   "{:13.0%}".format(df['Fill perstg'].tolist()[j]) +     \
+                   "{:13d}".format(df['House number'].tolist()[j]) +    \
+                   "{:14.2f}".format(df['House roof area'].tolist()[j]) + \
+                   "{:13.4f}".format(df['House water'].tolist()[j]) +     \
+                   "{:13.0%}".format(df['RWH contrbt'].tolist()[j]) +     \
                    "\n")
-    file.write('\n')
     file.close()

@@ -65,7 +65,7 @@ for i in [1,2]:
         y = [j[1] for j in sh.shape.points[:]]
         c = [k[0] for k in rec]
         b = [str(1 - (df[df['ID'] == l]['Fill perstg'].tolist()[0])) for l in c]
-        ax.fill(x, y, linewidth=1, color = s[b], alpha = 0.5)
+        ax.fill(x, y, linewidth=1, color = b[s], alpha = 0.5)
     ax.set(xlabel='Lon. (deg)', ylabel='Lat. (deg)',
     title= 'Disaster risk in level '+ str(i) +' drainage areas')
     my_x_ticks = np.arange(139.550, 139.571, 0.005)

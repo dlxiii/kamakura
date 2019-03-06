@@ -22,19 +22,20 @@ for i in [1,2]:
     file = open('../otps/outputCalInfo_'+ str(i) +'.txt', 'w+')
     file.write('Calculation of level '+ str(i) +' drainage area' + '\n')
     file.write('\n')
-    file.write('%-8s %-8s %-8s %-8s %-8s %-8s %-10s %-12s %-12s %-12s %-12s %-12s %-12s'          \
+    file.write('%-8s %-8s %-8s %-8s %-8s %-8s %-10s %-12s %-12s %-12s %-12s %-12s %-12s'                      \
                % ('ID','Inlet 1','Inlet 2','Inlet 3','Outlet','Slope','Rainwater','Capacity','Fill pstg',     \
                   'House num','Roof area','Roof water','RWH ctrbt') + '\n')
-    file.write('%-8s %-8s %-8s %-8s %-8s %-8s %-10s %-12s %-12s %-12s %-12s %-12s %-12s'          \
-               % ('(-)','(-)','(-)','(-)','(-)','(10^-3)','(m^3/sec)','(m^3/sec)','(-)',     \
+    file.write('%-8s %-8s %-8s %-8s %-8s %-8s %-10s %-12s %-12s %-12s %-12s %-12s %-12s'                      \
+               % ('(-)','(-)','(-)','(-)','(-)','(10^-3)','(m^3/sec)','(m^3/sec)','(-)',                      \
                   '(-)','(m^2)','(m^3/sec)','(-)') + '\n')
+    
     for j in range(len(df)):
-        file.write(                                                     \
-                "{:4.0f}".format(df['ID'].tolist()[j]) +            \
-                "{:9.0f}".format(df['Inlet 1'].tolist()[j]) +            \
-                "{:9.0f}".format(df['Inlet 2'].tolist()[j]) +            \
-                "{:9.0f}".format(df['Inlet 3'].tolist()[j]) +            \
-                "{:10.0f}".format(df['Outlet'].tolist()[j]) +           \
+        file.write(                                                    \
+                "{:4.0f}".format(df['ID'].tolist()[j]) +               \
+                "{:9.0f}".format(df['Inlet 1'].tolist()[j]) +          \
+                "{:9.0f}".format(df['Inlet 2'].tolist()[j]) +          \
+                "{:9.0f}".format(df['Inlet 3'].tolist()[j]) +          \
+                "{:10.0f}".format(df['Outlet'].tolist()[j]) +          \
                 "{:9.1f}".format(df['Slope'].tolist()[j]) +            \
                 "{:11.3f}".format(df['Rainwater'].tolist()[j]) +       \
                 "{:11.3f}".format(df['Capacity'].tolist()[j]) +        \

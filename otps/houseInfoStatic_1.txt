@@ -1,6 +1,6 @@
 Information of house stactics in level 1 drainage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Area ID    House number House roof area
+ID         House number House roof area
 15         121          8926.84        
 17         17           1526.13        
 26         66           4544.81        
@@ -45,6 +45,6 @@ Area ID    House number House roof area
 172        46           2672.56        
 153        2            71.38          
 167        63           5704.94        
-168        22           1526.21        
+169        22           1526.21        
 9999       34           2541.45        
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

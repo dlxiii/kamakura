@@ -1,6 +1,6 @@
 Information of house stactics in level 2 drainage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Area ID    House number House roof area
+ID         House number House roof area
 1          4            258.92         
 2          4            192.62         
 3          11           687.12         

@@ -134,9 +134,9 @@ for i in [rec_d1,rec_d2]:
     if len(i) == 219: flag = 2
     print('Information of house statics in level '+ str(flag) +' drainage.')
     print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
-    print('%-10s %-12s %-15s' % ('Area ID','House number','House roof area'))
+    print('%-10s %-12s %-15s' % ('ID','House number','House roof area'))
     for j in houseInfoStatic(rec_h0, i):
-        print('%-10d %-12d %-15.2f' % (j[0],j[1],j[2]))
+        print('%-10.0f %-12.0f %-15.2f' % (j[0],j[1],j[2]))
     print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
     
 for i in [rec_d1,rec_d2]:
@@ -145,16 +145,16 @@ for i in [rec_d1,rec_d2]:
     file = open('../otps/houseInfoStatic_'+ str(flag) +'.txt', 'w+')
     file.write('Information of house stactics in level '+ str(flag) +' drainage' + '\n')
     file.write('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%' + '\n')
-    file.write('%-10s %-12s %-15s' % ('Area ID','House number','House roof area') + '\n')
+    file.write('%-10s %-12s %-15s' % ('ID','House number','House roof area') + '\n')
     for j in houseInfoStatic(rec_h0, i):
-        file.write('%-10d %-12d %-15.2f' % (j[0],j[1],j[2]) + '\n')
+        file.write('%-10.0f %-12.0f %-15.2f' % (j[0],j[1],j[2]) + '\n')
     file.write('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%' + '\n')
     file.close()
     
 for i in [rec_d1,rec_d2]:
     if len(i) == 46: flag = 1
     if len(i) == 219: flag = 2
-    df = pd.DataFrame({'Inlet':[], 'House number':[], 'House roof area':[], 'House ID':[]})
+    df = pd.DataFrame({'ID':[], 'House number':[], 'House roof area':[], 'House ID':[]})
     list_0 = []
     list_1 = []
     list_2 = []
@@ -164,7 +164,7 @@ for i in [rec_d1,rec_d2]:
         list_1.append(j[1])
         list_2.append(j[2])
         list_3.append(j[3])
-    df['Inlet'] = list_0
+    df['ID'] = list_0
     df['House number'] = list_1
     df['House roof area'] = list_2
     df['House ID'] = list_3

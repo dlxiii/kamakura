@@ -117,9 +117,9 @@ def houseNumInArea(rec_h0, id_area, flag):
 
 def houseInfoStatic(rec_h0, rec_xx):
     idList = [i[0] for i in rec_xx]
-    if len(idList) == 46:
+    if len(idList) == len(rec_d1):
         flag = 1
-    if len(idList) == 219:
+    if len(idList) == len(rec_d2):
         flag = 2
     outputData = []
     for j in idList:
@@ -130,8 +130,8 @@ def houseInfoStatic(rec_h0, rec_xx):
     return outputData
 
 for i in [rec_d1,rec_d2]:
-    if len(i) == 46: flag = 1
-    if len(i) == 219: flag = 2
+    if len(i) == len(rec_d1): flag = 1
+    if len(i) == len(rec_d2): flag = 2
     print('Information of house statics in level '+ str(flag) +' drainage.')
     print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
     print('%-10s %-12s %-15s' % ('ID','House number','House roof area'))
@@ -140,8 +140,8 @@ for i in [rec_d1,rec_d2]:
     print('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
     
 for i in [rec_d1,rec_d2]:
-    if len(i) == 46: flag = 1
-    if len(i) == 219: flag = 2
+    if len(i) == len(rec_d1): flag = 1
+    if len(i) == len(rec_d2): flag = 2
     file = open('../otps/houseInfoStatic_'+ str(flag) +'.txt', 'w+')
     file.write('Information of house stactics in level '+ str(flag) +' drainage' + '\n')
     file.write('%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%' + '\n')
@@ -152,8 +152,8 @@ for i in [rec_d1,rec_d2]:
     file.close()
     
 for i in [rec_d1,rec_d2]:
-    if len(i) == 46: flag = 1
-    if len(i) == 219: flag = 2
+    if len(i) == len(rec_d1): flag = 1
+    if len(i) == len(rec_d2): flag = 2
     df = pd.DataFrame({'ID':[], 'House number':[], 'House roof area':[], 'House ID':[]})
     list_0 = []
     list_1 = []

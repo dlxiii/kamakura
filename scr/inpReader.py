@@ -8,7 +8,7 @@ Created on Tue Mar  5 20:19:44 2019
 import pickle
 import pandas as pd
 
-for i in [2]:
+for i in [1,2]:
     inps = '../inps/inps_'+ str(i) +'.csv'
     df_new = pickle.load(open('../otps/houseInfoStatic_'+ str(i) +'.data', mode = "rb"))
     df_inp = pd.read_csv(inps)

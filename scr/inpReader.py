@@ -33,9 +33,9 @@ for i in [1]:
     for j in range(len(df)):
         file.write("{:4d}".format(df['Inlet'].tolist()[j]) +            \
                    "{:10.0f}".format(df['Outlet'].tolist()[j]) +           \
-                   "{:9.2f}".format(df['Slope'].tolist()[j]) +            \
-                   "{:11.2f}".format(df['Rainwater'].tolist()[j]) +       \
-                   "{:11.2f}".format(df['Capacity'].tolist()[j]) +        \
+                   "{:9.1f}".format(df['Slope'].tolist()[j]) +            \
+                   "{:11.3f}".format(df['Rainwater'].tolist()[j]) +       \
+                   "{:11.3f}".format(df['Capacity'].tolist()[j]) +        \
                    "{:13.0%}".format(df['Fill perstg'].tolist()[j]) +     \
                    "{:13d}".format(df['House number'].tolist()[j]) +    \
                    "{:14.2f}".format(df['House roof area'].tolist()[j]) + \
